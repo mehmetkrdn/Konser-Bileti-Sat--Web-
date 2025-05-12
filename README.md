@@ -1,9 +1,6 @@
 # 🎫 Bilet Al: Laravel Tabanlı Konser Bileti Satış Sistemi
 
-**Proje Sahibi:** Mehmet Kordon  
-**Mail:** mehmetkordon09@gmail.com  
-**Okul Numarası:** 221307022  
-**Bölüm:** Bilişim Sistemleri Mühendisliği  
+
 
 ## 📌 Proje Özeti
 
