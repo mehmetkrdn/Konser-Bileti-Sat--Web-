@@ -26,7 +26,19 @@
 
 ---
 
-## 🏗️ Teknoloji ve Yapılar
+## API Testleri
+Bu proje, Laravel API'sini test etmek için Java + Maven + Rest Assured kullanır.
+Klasör: `rest-assured-login-test/`
+
+### Test edilen endpoint:
+- `POST /api/login`
+
+### Test kriterleri:
+- Durum kodu kontrolü (200 / 401)
+- Yanıt içeriği kontrolü
+- 1 saniye altında yanıt süresi
+
+## Teknoloji ve Yapılar
 
 | Teknoloji          | Açıklama |
 |--------------------|----------|
@@ -42,7 +54,7 @@
 
 ---
 
-## 🗂️ Veritabanı Tabloları
+## Veritabanı Tabloları
 
 - `users`: Kullanıcı bilgileri (ad, e-posta, bakiye, rol, vb.)
 - `concerts`: Konser bilgileri (başlık, tarih, stok, görsel, vb.)
@@ -51,7 +63,7 @@
 
 ---
 
-## 🖼️ Sayfa Listesi
+##  Sayfa Listesi
 
 | Sayfa Adı                         | Açıklama |
 |----------------------------------|----------|
@@ -75,7 +87,7 @@
 
 ---
 
-## 📎 Kaynaklar
+##  Kaynaklar
 
 - [Laravel Docs](https://laravel.com/docs)
 - [Bootstrap 5](https://getbootstrap.com)
@@ -85,7 +97,7 @@
 
 ---
 
-## 📂 Projeyi Çalıştırmak İçin
+##  Projeyi Çalıştırmak İçin
 
 ```bash
 git clone https://github.com/kullaniciadi/bilet-al.git
