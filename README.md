@@ -24,19 +24,41 @@
 - Reddedilen siparişler için otomatik bakiye iadesi
 - Kullanıcı hesaplarını görüntüleme ve yönetme
 
----
+# Rest Assured API Test Projesi
 
-## API Testleri
-Bu proje, Laravel API'sini test etmek için Java + Maven + Rest Assured kullanır.
-Klasör: `rest-assured-login-test/`
+Bu proje, Yazılım Test Mühendisliği dersi kapsamında hazırlanmıştır. Amaç, **RESTful servisleri test etmek** için Java, Maven ve JUnit4 teknolojilerini kullanarak otomatik regresyon testleri gerçekleştirmektir.
 
-### Test edilen endpoint:
-- `POST /api/login`
+## 🔧 Kullanılan Teknolojiler
 
-### Test kriterleri:
-- Durum kodu kontrolü (200 / 401)
-- Yanıt içeriği kontrolü
-- 1 saniye altında yanıt süresi
+- Java 8+
+- Maven
+- JUnit4
+- Rest Assured
+
+## 🧪 Test Senaryoları
+
+### 1. Doğru Email ve Şifre ile Giriş (POST `/api/login`)
+- ✅ Status code: 200
+- ✅ JSON response içinde `durum = basarili` ve `mesaj` içinde "Giriş" kelimesi aranır
+- ✅ Yanıt süresi 1 saniyenin altında olmalı
+
+### 2. Yanlış Şifre ile Giriş (POST `/api/login`)
+- ✅ Status code: 401
+- ✅ JSON response içinde `durum = hata` ve `mesaj` içinde "hatalı" kelimesi aranır
+
+### 3. Konserler Sayfası GET İsteği (GET `/konserler`)
+- ✅ Status code: 200
+- ✅ Yanıt süresi 1 saniyenin altında olmalı
+- ✅ Yanıt içeriği boş olmamalı (`body.length > 50`)
+
+## 🚀 Nasıl Çalıştırılır?
+
+1. Laravel API'nin çalıştığından emin olun (`php artisan serve`)
+2. Bu test projesi dizininde terminal açın ve aşağıdaki komutu çalıştırın:
+
+```bash
+mvn test
+
 
 ## Teknoloji ve Yapılar
 
